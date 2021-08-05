@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/index.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Validaciónd de Formularios</h2>
+
+    <form action="" class="contact-form">
+        <legend>Envianos tus Comentarios</legend>
+        <input type="text" placeholder="Escribe tu Nombre" name="name" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Nombre solo acepta letras y espacios en blanco">
+        <input type="email" placeholder="Escribe tu Email" required title="Email Incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+        <input type="text" placeholder="Asunto" required title="Asunto es Requerido" name="asunto">
+        <textarea name="textarea" id="" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Tu comentario nmo debe exceder los 255 caracteres" required></textarea>
+
+        <input type="submit">
+
+        <div class="contact-form-loader none">
+            <img src="./assets/ball-triangle.svg" alt="">
+        </div>
+        <div class="contact-form-response none">
+            <p>Los datos Se han enviado</p>
+        </div>
+    </form>
+
+
+
+    <script src="./index.js" type="module"></script>
+    
+</body>
+</html>
